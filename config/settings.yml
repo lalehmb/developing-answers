@@ -1,0 +1,17 @@
+plugins:
+  developing_1: 
+    client: true
+    default: "مرحله ی صفر"
+  developing_2: 
+    client: true
+    default: "مرحله ی صفر"
+  developing_3: 
+    client: true
+    default: "مرحله ی صفر"
+  developing_4: 
+    client: true
+    default: "مرحله ی صفر"
+  developing_5: 
+    client: true
+    default: "مرحله ی صفر"
+
