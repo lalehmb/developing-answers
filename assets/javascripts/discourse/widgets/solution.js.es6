@@ -209,8 +209,8 @@ export default createWidget('developing-solution', {
             else
                 imgUrl = "/uploads/default/original/2X/e/e4642d67129d101367059711444b00b266555418.jpg";
             contents.push(h("div.solution",[
-            h("a.image-sulotion", {attributes: {href: "/t/" + new_topic.id }}, h("img", {attributes:{src: imgUrl}})),
-            h("a.topiclink",{attributes: {href: "/t/" + new_topic.id }}, new_topic.title),
+            h("a.image-sulotion", {attributes: {href: "/t/" + new_topic.title + "/" + new_topic.id }}, h("img", {attributes:{src: imgUrl}})),
+            h("a.topiclink",{attributes: {href: "/t/" + new_topic.title + "/" + new_topic.id }}, new_topic.title),
             h("span", "بازدید:" + new_topic.views)]));
             if (i == 5)
                 break;
