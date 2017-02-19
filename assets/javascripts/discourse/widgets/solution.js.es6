@@ -67,7 +67,7 @@ export default createWidget('developing-solution', {
     const cate = attrs.category;
     const path = getOwner(this).lookup('controller:application').get('currentPath');
 
-    if (path == "discovery.latest")
+    if (path == "discovery.latest" || path == "discovery.top")
     {
           contents.push(h("h2.titleSolution", "راهکار های در حال تکمیل"));
 
@@ -154,7 +154,7 @@ export default createWidget('developing-solution', {
         var data;
         var new_topic;
         $.ajax({
-          url: "c/" + cate.slug + "/l/top/weekly.json",
+          url: "/c/" + cate.slug + "/l/top/weekly.json",
           dataType: 'json',
           async: false,
           success: function(res){
@@ -163,17 +163,7 @@ export default createWidget('developing-solution', {
         if (data.topic_list.topics.length == 0) 
         {
             $.ajax({
-          url: "c/" + cate.slug + "/l/top/monthly.json",
-          dataType: 'json',
-          async: false,
-          success: function(res){
-              data = res;
-          }});
-        }
-        if (data.topic_list.topics.length == 0) 
-        {
-            $.ajax({
-          url: "c/" + cate.slug + "/l/top/quarterly.json",
+          url: "/c/" + cate.slug + "/l/top/monthly.json",
           dataType: 'json',
           async: false,
           success: function(res){
@@ -183,7 +173,7 @@ export default createWidget('developing-solution', {
         if (data.topic_list.topics.length == 0) 
         {
             $.ajax({
-          url: "c/" + cate.slug + "/l/top/yearly.json",
+          url: "/c/" + cate.slug + "/l/top/quarterly.json",
           dataType: 'json',
           async: false,
           success: function(res){
@@ -193,7 +183,17 @@ export default createWidget('developing-solution', {
         if (data.topic_list.topics.length == 0) 
         {
             $.ajax({
-          url: "c/" + cate.slug + "/l/top/all.json",
+          url: "/c/" + cate.slug + "/l/top/yearly.json",
+          dataType: 'json',
+          async: false,
+          success: function(res){
+              data = res;
+          }});
+        }
+        if (data.topic_list.topics.length == 0) 
+        {
+            $.ajax({
+          url: "/c/" + cate.slug + "/l/top/all.json",
           dataType: 'json',
           async: false,
           success: function(res){
@@ -209,7 +209,7 @@ export default createWidget('developing-solution', {
             else
                 imgUrl = "/uploads/default/original/2X/e/e4642d67129d101367059711444b00b266555418.jpg";
             contents.push(h("div.solution",[
-            h("a.image-sulotion", {attributes: {href: "/t/" + new_topic.title + "/" + new_topic.id }}, h("img", {attributes:{src: imgUrl}})),
+            h("a.image-sulotion", {attributes: {href: "/t/" + new_topic.title + "/" + new_topic.id}}, h("img", {attributes:{src: imgUrl}})),
             h("a.topiclink",{attributes: {href: "/t/" + new_topic.title + "/" + new_topic.id }}, new_topic.title),
             h("span", "بازدید:" + new_topic.views)]));
             if (i == 5)
