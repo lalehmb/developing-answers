@@ -115,7 +115,7 @@ export default createWidget('developing-solution', {
            contents.push(h("div.solution",[
             h("a.image-sulotion", {attributes: {href: "/t/ایده‌ی-بی‌نام-ایستگاه-های-تولید-بیوگازاز-دورریزهای-غذا/2568/44"}}, h("img", {attributes:{src: "http://padpors-s3.s3-us-west-2.amazonaws.com/original/2X/2/24480d95ec4670d808fb2df66e89ffeca773529d.jpg"}})),
             h("a.topiclink",{attributes: {href: "/t/ایده‌ی-بی‌نام-ایستگاه-های-تولید-بیوگازاز-دورریزهای-غذا/2568/44"}}, "رآکتور بیوگاز"),
-            h("a.novacate", {attributes:{ href: "/c/nova-foodwaste"}}, "آلودگی هوا") ,
+            h("a.novacate", {attributes:{ href: "/c/nova-foodwaste"}}, "هدر رفت غذا") ,
             h("span", "بازدید:" + view1),
             h("div.level", Discourse.SiteSettings.developing_1)]));
 
