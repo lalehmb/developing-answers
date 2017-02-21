@@ -211,7 +211,7 @@ export default createWidget('developing-solution', {
             contents.push(h("div.solution",[
             h("a.image-sulotion", {attributes: {href: "/t/" + new_topic.title + "/" + new_topic.id}}, h("img", {attributes:{src: imgUrl}})),
             h("a.topiclink",{attributes: {href: "/t/" + new_topic.title + "/" + new_topic.id }}, new_topic.title),
-            h("span", "بازدید:" + new_topic.views)]));
+            h("span.views", "بازدید: " + new_topic.views)]));
             if (i == 5)
                 break;
         }
