@@ -84,7 +84,7 @@ export default createWidget('developing-solution', {
           dataType: 'json',
           async: false,
           success: function(data){
-              view3 = data.views;
+              view4 = data.views;
           }});
 
            $.ajax({
