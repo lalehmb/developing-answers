@@ -113,14 +113,14 @@ export default createWidget('developing-solution', {
 
 
            contents.push(h("div.solution",[
-            h("a.image-sulotion", {attributes: {href: "/t/ایده‌ی-بی‌نام-ایستگاه-های-تولید-بیوگازاز-دورریزهای-غذا/2568/44"}}, h("img", {attributes:{src: "https://padpors-s3.s3-us-west-2.amazonaws.com/original/2X/2/24480d95ec4670d808fb2df66e89ffeca773529d.jpg"}})),
+            h("a.image-sulotion", {attributes: {href: "/t/ایده‌ی-بی‌نام-ایستگاه-های-تولید-بیوگازاز-دورریزهای-غذا/2568/44"}}, h("img", {attributes:{src: "/uploads/default/original/2X/b/b5242cbc6ca0a76e477a51fc187e47df1b37c85b.jpg"}})),
             h("a.topiclink",{attributes: {href: "/t/ایده‌ی-بی‌نام-ایستگاه-های-تولید-بیوگازاز-دورریزهای-غذا/2568/44"}}, "رآکتور بیوگاز"),
             h("a.novacate", {attributes:{ href: "/c/nova-foodwaste"}}, "هدر رفت غذا") ,
             h("span", "بازدید:" + view1),
             h("div.level", Discourse.SiteSettings.developing_1)]));
 
           contents.push(h("div.solution",[
-            h("a.image-sulotion", {attributes: {href: "/t/پیاده-برو،-پاداش-بگیر/3854/16"}}, h("img", {attributes:{src: "/uploads/default/original/2X/b/bc3193226e585369203759614351be531027ee35.png"}})),
+            h("a.image-sulotion", {attributes: {href: "/t/پیاده-برو،-پاداش-بگیر/3854/16"}}, h("img", {attributes:{src: "/uploads/default/original/2X/b/bcde56c436a83f58e6741a792bbc51da33f41673.jpg"}})),
             h("a.topiclink",{attributes: {href: "/t/پیاده-برو،-پاداش-بگیر/3854/16"}}, "پیاده برو، پاداش بگیر!"),
             h("a.novacate", {attributes:{ href: "/c/nova-pollution"}}, "آلودگی هوا") ,
             h("span", "بازدید:" + view2),
@@ -134,7 +134,7 @@ export default createWidget('developing-solution', {
             h("div.level", Discourse.SiteSettings.developing_3)]));*/
 
           contents.push(h("div.solution",[
-            h("a.image-sulotion", {attributes: {href: "/t/چه-جوری-درختکاری-چریکی-رو-به-نفع-هوای-آلوده-رواج-بدیم؟/3766"}}, h("img", {attributes:{src: "/uploads/default/original/2X/a/a108008aa898c49f18e4ba34f453de013814ca40.png"}})),
+            h("a.image-sulotion", {attributes: {href: "/t/چه-جوری-درختکاری-چریکی-رو-به-نفع-هوای-آلوده-رواج-بدیم؟/3766"}}, h("img", {attributes:{src: "/uploads/default/original/2X/f/ff2f9cb328fc5708c1c2a51b9a3bfce1b6f5765c.jpg"}})),
             h("a.topiclink",{attributes: {href: "/t/چه-جوری-درختکاری-چریکی-رو-به-نفع-هوای-آلوده-رواج-بدیم؟/3766"}}, "درخت کاری چریکی"),
             h("a.novacate", {attributes:{ href: "/c/nova-pollution"}}, "آلودگی هوا") ,
             h("span", "بازدید:" + view4),
