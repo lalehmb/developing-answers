@@ -113,8 +113,8 @@ export default createWidget('developing-solution', {
 
 
            contents.push(h("div.solution",[
-            h("a.image-sulotion", {attributes: {href: "/t/ایده‌ی-بی‌نام-ایستگاه-های-تولید-بیوگازاز-دورریزهای-غذا/2568/44"}}, h("img", {attributes:{src: "/uploads/default/original/2X/b/b5242cbc6ca0a76e477a51fc187e47df1b37c85b.jpg"}})),
-            h("a.topiclink",{attributes: {href: "/t/ایده‌ی-بی‌نام-ایستگاه-های-تولید-بیوگازاز-دورریزهای-غذا/2568/44"}}, "رآکتور بیوگاز"),
+            h("a.image-sulotion", {attributes: {href: "/t/%D8%A7%DB%8C%D8%B3%D8%AA%DA%AF%D8%A7%D9%87-%D9%87%D8%A7%DB%8C-%D8%AA%D9%88%D9%84%DB%8C%D8%AF-%D8%A8%DB%8C%D9%88%DA%AF%D8%A7%D8%B2-%D8%A7%D8%B2-%D8%AF%D9%88%D8%B1%D8%B1%DB%8C%D8%B2%D9%87%D8%A7%DB%8C-%D8%BA%D8%B0%D8%A7/2568"}}, h("img", {attributes:{src: "/uploads/default/original/2X/b/b5242cbc6ca0a76e477a51fc187e47df1b37c85b.jpg"}})),
+            h("a.topiclink",{attributes: {href: "/t/%D8%A7%DB%8C%D8%B3%D8%AA%DA%AF%D8%A7%D9%87-%D9%87%D8%A7%DB%8C-%D8%AA%D9%88%D9%84%DB%8C%D8%AF-%D8%A8%DB%8C%D9%88%DA%AF%D8%A7%D8%B2-%D8%A7%D8%B2-%D8%AF%D9%88%D8%B1%D8%B1%DB%8C%D8%B2%D9%87%D8%A7%DB%8C-%D8%BA%D8%B0%D8%A7/2568"}}, "رآکتور بیوگاز"),
             h("a.novacate", {attributes:{ href: "/c/nova-foodwaste"}}, "هدر رفت غذا") ,
             h("span", "بازدید:" + view1),
             h("div.level", Discourse.SiteSettings.developing_1)]));
