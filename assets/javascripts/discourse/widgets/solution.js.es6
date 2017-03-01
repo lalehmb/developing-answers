@@ -69,7 +69,7 @@ export default createWidget('developing-solution', {
 
     if (path == "discovery.latest" || path == "discovery.top")
     {
-          contents.push(h("a",{attributes:{href:"/t/راه‌حل‌های-پادپُرسی/4202"}},h("h2.titleSolution", "راهکار های در حال تکمیل")));
+          contents.push(h("a",{attributes:{href:"/t/راه‌حل‌های-پادپُرسی/4202"}},h("h2.titleSolution", "راه‌حل‌های در دست ساخت")));
 
            $.ajax({
           url: "/t/3854.json",
