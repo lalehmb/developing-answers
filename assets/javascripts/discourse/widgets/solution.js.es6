@@ -95,7 +95,7 @@ export default createWidget('developing-solution', {
               view1 = data.views;
           }});
 
-           $.ajax({
+           /*$.ajax({
           url: "/t/3914.json",
           dataType: 'json',
           async: false,
@@ -109,7 +109,7 @@ export default createWidget('developing-solution', {
           async: false,
           success: function(data){
               view5 = data.views;
-          }});
+          }});*/
 
 
            contents.push(h("div.solution",[
@@ -126,12 +126,12 @@ export default createWidget('developing-solution', {
             h("span", "بازدید:" + view2),
             h("div.level", Discourse.SiteSettings.developing_2)]));
 
-          contents.push(h("div.solution",[
+          /*contents.push(h("div.solution",[
             h("a.image-sulotion", {attributes: {href: "/t/ادامه-کارابتکار-جمعی-برای-ترویج-استفاده-از-مترو-با-هدف-کاهش-آلودگی-هوا/3914"}}, h("img", {attributes:{src: "/uploads/default/original/2X/7/757f21137eed52ee8d900c7d2be1363a8a09c9db.jpg"}})),
             h("a.topiclink",{attributes: {href: "/t/ادامه-کارابتکار-جمعی-برای-ترویج-استفاده-از-مترو-با-هدف-کاهش-آلودگی-هوا/3914"}}, "رادیو مترو"),
             h("a.novacate", {attributes:{ href: "/c/nova-pollution"}}, "آلودگی هوا") ,
             h("span", "بازدید:" + view3),
-            h("div.level", Discourse.SiteSettings.developing_3)]));
+            h("div.level", Discourse.SiteSettings.developing_3)]));*/
 
           contents.push(h("div.solution",[
             h("a.image-sulotion", {attributes: {href: "/t/چه-جوری-درختکاری-چریکی-رو-به-نفع-هوای-آلوده-رواج-بدیم؟/3766"}}, h("img", {attributes:{src: "/uploads/default/original/2X/a/a108008aa898c49f18e4ba34f453de013814ca40.png"}})),
@@ -140,12 +140,12 @@ export default createWidget('developing-solution', {
             h("span", "بازدید:" + view4),
             h("div.level", Discourse.SiteSettings.developing_4)]));
 
-          contents.push(h("div.solution",[
+          /*contents.push(h("div.solution",[
             h("a.image-sulotion", {attributes: {href: "/t/بهبود-مشکلات-دوچرخه-سواری-در-تهران-برای-کاهش-آلودگی-هوا/3941"}}, h("img", {attributes:{src: "https://padpors.com/uploads/default/original/2X/e/eb1bad0b592d0704a8260795db9cd13e9b4cb635.png"}})),
             h("a.topiclink",{attributes: {href: "/t/بهبود-مشکلات-دوچرخه-سواری-در-تهران-برای-کاهش-آلودگی-هوا/3941"}}, "مسیر های مرئی دوچرخه"),
             h("a.novacate", {attributes:{ href: "/c/nova-pollution"}}, "آلودگی هوا") ,
             h("span", "بازدید:" + view5),
-            h("div.level", Discourse.SiteSettings.developing_5)]));
+            h("div.level", Discourse.SiteSettings.developing_5)]));*/
 
     }
     else if (cate && topic == undefined) 
