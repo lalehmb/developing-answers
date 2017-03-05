@@ -94,7 +94,7 @@ contents.push(h("h2.novatitle",[h("a",{attributes:{href:"/t/راه‌حل‌ها
               view1 = data.views;
           }});
 
-           /*$.ajax({
+          /* $.ajax({
           url: "/t/3914.json",
           dataType: 'json',
           async: false,
@@ -139,13 +139,82 @@ contents.push(h("h2.novatitle",[h("a",{attributes:{href:"/t/راه‌حل‌ها
             h("span", "بازدید:" + view4),
             h("div.level", Discourse.SiteSettings.developing_4)]));
 
-          /*contents.push(h("div.solution",[
+         /*contents.push(h("div.solution",[
             h("a.image-sulotion", {attributes: {href: "/t/بهبود-مشکلات-دوچرخه-سواری-در-تهران-برای-کاهش-آلودگی-هوا/3941"}}, h("img", {attributes:{src: "https://padpors.com/uploads/default/original/2X/e/eb1bad0b592d0704a8260795db9cd13e9b4cb635.png"}})),
             h("a.topiclink",{attributes: {href: "/t/بهبود-مشکلات-دوچرخه-سواری-در-تهران-برای-کاهش-آلودگی-هوا/3941"}}, "مسیر های مرئی دوچرخه"),
             h("a.novacate", {attributes:{ href: "/c/nova-pollution"}}, "آلودگی هوا") ,
             h("span", "بازدید:" + view5),
             h("div.level", Discourse.SiteSettings.developing_5)]));*/
 
+    }
+    else if (cate.parent_category_id)
+    {
+        var parent = Discourse.Category.findById(cate.parent_category_id);
+        contents.push(h("h2", "برترین‌ها"));
+        var data;
+        var new_topic;
+        $.ajax({
+          url: "/c/" + parent.slug + "/l/top/weekly.json",
+          dataType: 'json',
+          async: false,
+          success: function(res){
+              data = res;
+          }});
+        if (data.topic_list.topics.length == 0) 
+        {
+            $.ajax({
+          url: "/c/" + parent.slug + "/l/top/monthly.json",
+          dataType: 'json',
+          async: false,
+          success: function(res){
+              data = res;
+          }});
+        }
+        if (data.topic_list.topics.length == 0) 
+        {
+            $.ajax({
+          url: "/c/" + parent.slug + "/l/top/quarterly.json",
+          dataType: 'json',
+          async: false,
+          success: function(res){
+              data = res;
+          }});
+        }
+        if (data.topic_list.topics.length == 0) 
+        {
+            $.ajax({
+          url: "/c/" + parent.slug + "/l/top/yearly.json",
+          dataType: 'json',
+          async: false,
+          success: function(res){
+              data = res;
+          }});
+        }
+        if (data.topic_list.topics.length == 0) 
+        {
+            $.ajax({
+          url: "/c/" + parent.slug + "/l/top/all.json",
+          dataType: 'json',
+          async: false,
+          success: function(res){
+              data = res;
+          }});
+        }
+        for (var i = 0 ; i < data.topic_list.topics.length ; i++)
+        {
+            new_topic = data.topic_list.topics[i];
+            var imgUrl;
+            if(new_topic.image_url)
+                imgUrl = new_topic.image_url;
+            else
+                imgUrl = "/uploads/default/original/2X/e/e4642d67129d101367059711444b00b266555418.jpg";
+            contents.push(h("div.solution",[
+            h("a.image-sulotion", {attributes: {href: "/t/" + new_topic.title + "/" + new_topic.id}}, h("img", {attributes:{src: imgUrl}})),
+            h("a.topiclink",{attributes: {href: "/t/" + new_topic.title + "/" + new_topic.id }}, new_topic.title),
+            h("span.views", "بازدید: " + new_topic.views)]));
+            if (i == 5)
+                break;
+        }
     }
     else if (cate && topic == undefined) 
     {
