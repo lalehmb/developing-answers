@@ -69,7 +69,7 @@ export default createWidget('developing-solution', {
 
     if (path == "discovery.latest" || path == "discovery.top")
     {
-contents.push(h("h2.novatitle",[h("a",{attributes:{href:"/t/راه‌حل‌های-پادپُرسی/4202"}},"راه‌حل‌"),"های در دست ساخت"]));
+contents.push(h("h2.novatitle",[h("a",{attributes:{href:"/نوآوری-جمعی-در-پادپُرس-چه-جوری-کار-میکنه؟/3601#No"}},"راه‌حل‌"),"های نوآوران"]));
            $.ajax({
           url: "/t/3854.json",
           dataType: 'json',
